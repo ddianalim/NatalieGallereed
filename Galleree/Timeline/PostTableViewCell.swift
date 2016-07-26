@@ -17,19 +17,10 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var postDateLabel: UILabel!
     @IBOutlet weak var viewPostButton: UIButton!
     @IBOutlet weak var dashImageView: UIImageView!
-
-    
-  //  @IBOutlet weak var postImageView: UIImageView!
-  //  @IBOutlet weak var likesIconImageView: UIImageView!
-   // @IBOutlet weak var likesLabel: UILabel!
-  //  @IBOutlet weak var likeButton: UIButton!
- //   @IBOutlet weak var moreButton: UIButton!
-    
-    
     
     var postDisposable: DisposableType?
     
-    var post: Post? {
+  /*  var post: Post? {
         didSet {
         
             postDisposable?.dispose()
@@ -45,7 +36,7 @@ class PostTableViewCell: UITableViewCell {
                 
                 }
             }
-        }
+        }*/
     }
     
     // Generates a comma separated list of usernames from an array (e.g. "User1, User2")
@@ -56,9 +47,9 @@ class PostTableViewCell: UITableViewCell {
         let commaSeparatedUserList = usernameList.joinWithSeparator(", ")
         
         return commaSeparatedUserList
-    }*/
-    
-/*    override func awakeFromNib() {
+    }
+ 
+    override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }

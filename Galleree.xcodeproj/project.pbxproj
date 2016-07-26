@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2D2365308D918C34311DE67C /* Pods_Galleree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9567B50E4CF493734BD3BFF1 /* Pods_Galleree.framework */; };
-		3145681E1D46B84C00E795C0 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3145681D1D46B84C00E795C0 /* TimelineViewController.swift */; };
 		31656E901D35715B00D03986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31656E8F1D35715B00D03986 /* AppDelegate.swift */; };
 		31656E921D35715B00D03986 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31656E911D35715B00D03986 /* ViewController.swift */; };
 		31656E951D35715B00D03986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31656E931D35715B00D03986 /* Main.storyboard */; };
@@ -48,7 +47,6 @@
 
 /* Begin PBXFileReference section */
 		2697B17161A9C26D536875E4 /* Pods-GallereeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GallereeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GallereeTests/Pods-GallereeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3145681D1D46B84C00E795C0 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		31656E8C1D35715B00D03986 /* Galleree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Galleree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31656E8F1D35715B00D03986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31656E911D35715B00D03986 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 				31656E961D35715B00D03986 /* Assets.xcassets */,
 				31656E981D35715B00D03986 /* LaunchScreen.storyboard */,
 				31656E9B1D35715B00D03986 /* Info.plist */,
-				3145681D1D46B84C00E795C0 /* TimelineViewController.swift */,
 			);
 			path = Galleree;
 			sourceTree = "<group>";
@@ -479,7 +476,6 @@
 				31AA9A561D3D9AB2007313FC /* HomeView.swift in Sources */,
 				F0FC87131D418C59001E0ABE /* PhotoTakingHelper.swift in Sources */,
 				31AA9A581D3D9ACE007313FC /* UserView.swift in Sources */,
-				3145681E1D46B84C00E795C0 /* TimelineViewController.swift in Sources */,
 				F0FC87151D42D946001E0ABE /* ViewingPost.swift in Sources */,
 				31656E901D35715B00D03986 /* AppDelegate.swift in Sources */,
 				F0FC87111D418B9A001E0ABE /* PhotoViewController.swift in Sources */,
@@ -633,6 +629,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Galleree/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alitdiamond.Gallereeapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -648,6 +645,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Galleree/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alitdiamond.Gallereeapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

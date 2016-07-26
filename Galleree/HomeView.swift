@@ -6,28 +6,9 @@
 //  Copyright © 2016 Natalie Lim. All rights reserved.
 //
 
-/*import UIKit
-import Parse
-
-class HomeViewController : UIViewController {
-    
-    @IBAction func unwindToListNotesViewController(segue: UIStoryboardSegue) {
-    }
-    
-    var photoTakingHelper: PhotoTakingHelper?
-    
-    func takePhoto() {
-        // instantiate photo taking class, provide callback for when photo is selected
-        photoTakingHelper = PhotoTakingHelper(viewController: self.tabBarController!) { (image: UIImage?) in
-            let post = Post()
-            post.image = image
-            post.uploadPost()
-        }
-    }
-    
-}*/
-
 import UIKit
+
+import ConvenienceKit
 import Parse
 
 class HomeViewController: UIViewController { //TimelineComponentTarget {
@@ -37,7 +18,7 @@ class HomeViewController: UIViewController { //TimelineComponentTarget {
     }
     
     var photoTakingHelper: PhotoTakingHelper?
-    var timelineComponent: TimelineComponent<Post, TimelineViewController>!
+ //   var timelineComponent: TimelineComponent<Post, HomeViewController>!
     
     let defaultRange = 0...4
     let additionalRangeSize = 5
@@ -45,19 +26,11 @@ class HomeViewController: UIViewController { //TimelineComponentTarget {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        timelineComponent = TimelineComponent(target: self)
-        self.tabBarController?.delegate = self
     }
-    
-    func takePhoto() {
-        // instantiate photo taking class, provide callback for when photo is selected
-        photoTakingHelper =
-            PhotoTakingHelper(viewController: self.tabBarController!) { (image: UIImage?) in
-                let post = Post()
-                // 1
-                post.image.value = image!
-                post.uploadPost()
-        }
+}
+        
+ /*       timelineComponent = TimelineComponent(target: self)
+        self.tabBarController?.delegate = self
     }
     
     func loadInRange(range: Range<Int>, completionBlock: ([Post]?) -> Void) {
@@ -72,23 +45,11 @@ class HomeViewController: UIViewController { //TimelineComponentTarget {
         }
         
     }
-}
+}*/
 
 // MARK: Tab Bar Delegate
 
-extension HomeViewController: UITabBarControllerDelegate {
-    
-    func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
-        if (viewController is PhotoViewController) {
-            takePhoto()
-            return false
-        } else {
-            return true
-        }
-    }
-}
-
-extension HomeViewController: UITableViewDataSource {
+/*extension HomeViewController: UITableViewDataSource {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return self.timelineComponent.content.count
@@ -109,15 +70,15 @@ extension HomeViewController: UITableViewDataSource {
         return cell
     }
 }
+*/
 
-
-extension HomeViewController: UITableViewDelegate {
+/*extension HomeViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         timelineComponent.targetWillDisplayEntry(indexPath.section)
     }
     
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+   /* func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerCell = tableView.dequeueReusableCellWithIdentifier("PostHeader") as! PostSectionHeaderView
         
         let post = self.timelineComponent.content[section]
@@ -125,8 +86,9 @@ extension HomeViewController: UITableViewDelegate {
         
         return headerCell
     }
+    */
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
-}
+}*/
