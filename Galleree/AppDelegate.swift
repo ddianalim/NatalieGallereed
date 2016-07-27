@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Set up the Parse SDK
         let configuration = ParseClientConfiguration {
             $0.applicationId = "galleree"
-            $0.server = "https://galleree.herokuapp.com/parse"
+            $0.server = "https://gallereedash.herokuapp.com/parse"
         }
         Parse.initializeWithConfiguration(configuration)
         
